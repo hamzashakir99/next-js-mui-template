@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --theme-background-paper: white;
+  --theme-divider: rgba(0, 0, 0, 0.12);
+}
+
+[data-rsbs-overlay] {
+  background-color: var(--theme-background-paper) !important;
+}
+[data-rsbs-header]::before {
+    background-color: var(--theme-divider) !important;
+}
