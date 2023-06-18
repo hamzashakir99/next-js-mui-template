@@ -1,0 +1,72 @@
+.number-input {
+    input {
+        padding-left: 60px !important;
+    }
+
+    span {
+        z-index: 1;
+        left: 90px !important;
+    }
+
+    p {
+        top: 0 !important;
+        left: 90px !important;
+        background: linear-gradient(transparent 50%, white 50%) !important;
+    }
+
+    .country-list {
+        span {
+            position: static;
+        }
+    }
+}
+
+.resend-countdown {
+    display: flex;
+
+    &>div {
+        height: 50px !important;
+        width: 50px !important;
+
+        // margin:30px auto;
+        svg {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .timer {
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+.password-validator {
+    li {
+        position: static !important;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 11px;
+        position: static !important;
+        text-transform: capitalize;
+    }
+
+    svg {
+        height: 14px;
+        width: 14px
+    }
+
+    span {
+        position: static !important;
+        font-size: 16px;
+    }
+}
