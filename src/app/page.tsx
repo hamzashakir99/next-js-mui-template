@@ -1,5 +1,4 @@
 'use client'
-import { Metadata } from 'next'
 import React from 'react'
 import { Box, Grid, Button, Container } from '@mui/material'
 import { useRouter } from 'next/navigation'

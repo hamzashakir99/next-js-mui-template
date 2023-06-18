@@ -27,19 +27,17 @@ import styles from "@/styles/Login.module.scss";
 
 export default function ForgetPassword() {
   const dispatch = useDispatch();
-  const forgetSelector = useSelector(
-    (state: any) => state.loginSlice.forget_password
-  );
+  const authSlice = useSelector((state: any) => state.authSlice);
+  const { action } = authSlice;
   const theme: ICustomTheme = useTheme();
   const handleClickShowPassword = () => {
     dispatch(
       forgetSetting({
-        ...forgetSelector,
-        show_password: !forgetSelector.show_password,
+        ...authSlice[action],
+        show_password: !authSlice[action].show_password,
       })
     );
   };
-  console.log(theme.palette.primary);
   const Countdown = useCallback(() => {
     return (
       <Box className={`${styles["resend-countdown"]}`}>
@@ -59,9 +57,7 @@ export default function ForgetPassword() {
         <CountdownCircleTimer
           isPlaying
           duration={60}
-          //   colors={["#5099BE", "#71C07B"]}
           colors="url(#your-unique-id)"
-          //   colorsTime={[60, 30, 15, 0]}
           onComplete={() => ({ shouldRepeat: false, delay: 1 })}
         >
           {({ remainingTime }) => remainingTime}
@@ -77,7 +73,7 @@ export default function ForgetPassword() {
           height: "100vh",
         }}
       >
-        {forgetSelector.step === 1 ? (
+        {authSlice[action].step === 1 ? (
           <>
             <Container
               sx={{
@@ -115,13 +111,13 @@ export default function ForgetPassword() {
                     }}
                   >
                     <TextField
-                      type={forgetSelector.show_password ? "text" : "password"}
+                      type={authSlice[action].show_password ? "text" : "password"}
                       label="Password"
-                      value={forgetSelector.password}
+                      value={authSlice[action].password}
                       onChange={(event) => {
                         dispatch(
                           forgetSetting({
-                            ...forgetSelector,
+                            ...authSlice[action],
                             password: event.target.value,
                           })
                         );
@@ -139,7 +135,7 @@ export default function ForgetPassword() {
                               onClick={handleClickShowPassword}
                               edge="end"
                             >
-                              {forgetSelector.show_password ? (
+                              {authSlice[action].show_password ? (
                                 <VisibilityOff />
                               ) : (
                                 <Visibility />
@@ -149,12 +145,12 @@ export default function ForgetPassword() {
                         ),
                       }}
                     />
-                    {forgetSelector.password && (
+                    {authSlice[action].password && (
                       <>
                         <PasswordStrengthBar
                           style={{ margin: "20px 0 0" }}
                           className={` ${styles["password-validator"]}`}
-                          password={forgetSelector.password}
+                          password={authSlice[action].password}
                         />
                         <PasswordChecklist
                           rules={[
@@ -164,7 +160,7 @@ export default function ForgetPassword() {
                             "capital",
                           ]}
                           minLength={8}
-                          value={forgetSelector.password}
+                          value={authSlice[action].password}
                           className={` ${styles["password-validator"]}`}
                         />
                       </>
@@ -236,20 +232,20 @@ export default function ForgetPassword() {
                 >
                   <PinInput
                     length={4}
-                    initialValue={forgetSelector.code}
+                    initialValue={authSlice[action].code}
                     onChange={(value) => {
                       dispatch(
                         forgetSetting({
-                          ...forgetSelector,
+                          ...authSlice[action],
                           code: value,
                         })
                       );
                     }}
-                    onComplete={(value) => {
+                    onComplete={() => {
                       dispatch(
                         forgetSetting({
-                          ...forgetSelector,
-                          step: forgetSelector.step + 1,
+                          ...authSlice[action],
+                          step: authSlice[action].step + 1,
                         })
                       );
                     }}

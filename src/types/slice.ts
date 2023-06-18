@@ -23,7 +23,7 @@ export interface IDepartmentSlice {
   };
 }
 export interface IAuthSlice {
-  action: 'login' | 'register' | 'forgot-password';
+  action: 'login' | 'register' | 'forget_password';
   login: {
       phone: string,
       password: string,

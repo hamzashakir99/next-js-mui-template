@@ -3,7 +3,7 @@
 import React from "react";
 import { Container } from "@mui/material";
 
-import NavigationHeader from "@/src/components/auth/navigation.header";
+import AuthNavigationHeader from "@/src/components/headers/auth.navigation.header";
 
 export default function AdminLayout({
   children, // will be a page or nested layout
@@ -18,7 +18,7 @@ export default function AdminLayout({
         pb: "40px",
       }}
     >
-      <NavigationHeader/>
+      <AuthNavigationHeader/>
       {children}
     </Container>
   );

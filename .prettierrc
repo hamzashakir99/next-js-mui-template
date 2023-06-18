@@ -4,7 +4,7 @@
   "jsxSingleQuote": true,
   "tabWidth": 2,
   "trailingComma": "none",
-  "semi": false,
+  "semi": true,
   "proseWrap": "always",
   "printWidth": 80
 }

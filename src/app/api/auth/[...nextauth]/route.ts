@@ -26,6 +26,8 @@ export const authOptions = {
       },
       async authorize(credentials, req) {
         try {
+          console.log(credentials)
+          console.log(req)
           // Add logic here to look up the user from the credentials supplied
           /*const res = await serverInstance.post("/api/v1/login", {
             email: credentials?.email,
