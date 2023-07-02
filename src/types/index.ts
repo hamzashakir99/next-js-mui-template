@@ -1,6 +1,22 @@
-import { ISheet, IAccordion } from "./component";
-import { IComponentsSlice, IDepartmentSlice, IAuthSlice, IThemeSlice } from "./slice";
-import { ICustomTheme } from "./theme"
+import { ISheet, IAccordion } from './component';
+import {
+  IComponentsSlice,
+  IDepartmentSlice,
+  IAuthSlice,
+  IThemeSlice,
+  ICommonSlice,
+  ICompanySlice,IContactWidgetSlice
+} from './slice';
+import { ICustomTheme } from './theme';
 export type {
-    ISheet, IAccordion, IComponentsSlice, IDepartmentSlice, IAuthSlice, ICustomTheme, IThemeSlice
-}
+  ISheet,
+  IAccordion,
+  IComponentsSlice,
+  IDepartmentSlice,
+  IAuthSlice,
+  ICommonSlice,
+  ICustomTheme,
+  IThemeSlice,
+  IContactWidgetSlice,
+  ICompanySlice
+};

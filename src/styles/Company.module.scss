@@ -1,0 +1,63 @@
+@import '.././app/variables';
+
+.edit-header-section {
+  background: $primary-font-color;
+  border-radius: 0 0 10px 10px;
+  box-shadow: none;
+  color: white;
+  height: 70px;
+
+  svg {
+    color: white;
+  }
+
+  h5 {
+    margin: 0;
+  }
+}
+.header-section {
+  background: $white-color;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.search-input {
+  background-color: $primary-font-color;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  input,
+  fieldset {
+    outline: 0 !important;
+    border-color: transparent !important;
+  }
+}
+.single-company {
+  h6 {
+    color: $primary-font-color !important;
+    font-size: 14px !important;
+  }
+
+  h5 {
+    font-size: 16px !important;
+  }
+  .Mui-checked {
+    color: $primary-font-color;
+  }
+}
+.image {
+  img {
+    max-width: 100% !important;
+    min-width: auto !important;
+    max-height: 100% !important;
+    min-height: auto !important;
+    height: 60px !important;
+    width: 60px !important;
+    margin: 0 !important;
+    position: static !important;
+    inset: initial !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+      0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+

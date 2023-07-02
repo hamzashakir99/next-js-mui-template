@@ -6,6 +6,7 @@ const colors = {
     success: "#25D366",
     danger: "#FF3E2C",
     pink: "#E76795",
+    blackColor: "#333",
 }
 
 export const getDesignTokens = (mode: PaletteMode): any => ({
@@ -32,12 +33,11 @@ export const getDesignTokens = (mode: PaletteMode): any => ({
                 pink: {
                     main: colors.pink
                 },
-                blue: {
-                    main: "#71C07B"
-                },
-                greenish: {
-                    main: "#5099BE"
-                },
+                blue: "#71C07B",
+                greenish: "#5099BE",
+                lightGray:  "#DDDDDD",
+                dark: "#333",
+                white:"#fff",
                 // divider: amber[200],
                 text: {
                     primary: grey[900],
@@ -75,7 +75,12 @@ export const getDesignTokens = (mode: PaletteMode): any => ({
                     fontWeight: 400,
                     textTransform: "capitalize",
                 },
-
+                text: {
+                    background: "transparent !important",
+                    color: colors.blackColor,
+                    fontWeight: 600,
+                    transition: "none"
+                }
             },
         },
         MuiInputBase: {

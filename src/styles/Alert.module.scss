@@ -1,0 +1,37 @@
+@import '.././app/variables';
+
+.error-alert {
+    background: $negative-background-color;
+    border: 0.5px solid $negative-border-color;
+
+    h5 {
+        color: $negative-font-color;
+        text-transform: capitalize;
+        margin-bottom: 3px;
+        font-size: 17px !important;
+        font-weight: bold;
+    }
+
+    span,
+    svg {
+        color: $negative-font-color !important;
+    }
+}
+
+.success-alert {
+    background: #b5ebcc;
+    border: 0.5px solid #35c371;
+
+    h5 {
+        color: $green-color !important;
+        text-transform: capitalize;
+        margin-bottom: 3px;
+        font-size: 17px !important;
+        font-weight: bold;
+    }
+
+    span,
+    svg {
+        color: $green-color !important;
+    }
+}

@@ -1,0 +1,69 @@
+@import '.././app/variables';
+
+.info-alert {
+  background: $light-blue;
+  border-radius: 8px;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: $primary-font-color;
+  color: $black-color;
+}
+
+.domain-name-input {
+  div {
+    padding-right: 0 !important;
+
+    div {
+      i {
+        padding-right: 11px !important;
+        font-size: 14px
+      }
+    }
+  }
+}
+
+.flag-list {
+  .listing-section {
+    overflow: auto;
+    border-radius: 0 !important;
+  }
+
+  .flag-list-search {
+    padding: 10px 10px 0;
+
+    svg {
+      font-size: 24px;
+
+      &:first-child {
+        color: $primary-font-color;
+        font-size: 30px;
+      }
+    }
+
+    input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      font-size: 18px;
+    }
+  }
+
+  .listings {
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f4f3f3;
+      border-radius: 0 !important;
+    }
+
+    h6 {
+      font-size: 18px;
+    }
+  }
+
+  .active-flag {
+    background: #f4f3f3;
+    border-radius: 0 !important;
+  }
+}

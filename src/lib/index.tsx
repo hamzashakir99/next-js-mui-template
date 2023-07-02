@@ -1,21 +1,20 @@
 import NextAuthProvider from "./providers/Auth.Providers";
 import ReduxStoreProvider from "./providers/Redux.Providers";
 import ThemeProvider from "./providers/Theme.Providers";
-import ReactQueryProvider from "./providers/React.Query.Providers";
+import SocketProvider, { SocketContext } from "./providers/Socket.Provider";
+import DomainProvider from "./providers/Domain.Provider";
 import { changeTheme } from "./utils/common";
 import { serverInstance } from "./utils/axios";
 import { CustomError } from "./utils/error";
-import Hydrate from "./utils/hydrate.client";
-import getQueryClient from "./utils/get.query.client";
 
 export {
     NextAuthProvider,
     ReduxStoreProvider,
     ThemeProvider,
-    ReactQueryProvider,
+    DomainProvider,
     changeTheme,
     serverInstance,
     CustomError,
-    Hydrate,
-    getQueryClient
+    SocketProvider,
+    SocketContext,
 }
